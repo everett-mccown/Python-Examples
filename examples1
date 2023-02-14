@@ -8,7 +8,6 @@
 # If play is set to True, another round of Rock, Paper, Scissors should begin
 # If play is set to False, "Thank you for playing!" should be output and game play should end.
 import random
-
 def choose_rps():
     "output: randomly returns rock, paper, or scissors"
     r = random.randint(0,2)
@@ -25,17 +24,17 @@ def rps_gameplay(player1, player2):
     if player2 == player1:
       print("It's a tie!")
     elif player2 == "rock" and player1 == "paper":
-      print("Player 2 wins!")
+      print("Player 1 wins!")
     elif player2 == "rock" and player1 == "scissors":
-      print("Player 1 wins!")
+      print("Player 2 wins!")
     elif player2 == "paper" and player1 == "rock":
-      print("Player 1 wins!")
+      print("Player 2 wins!")
     elif player2 == "paper" and player1 == "scissors":
-      print("Player 2 wins!")
-    elif player2 == "scissors" and player1 == "rock":
-      print("Player 2 wins!")
-    else:
       print("Player 1 wins!")
+    elif player2 == "scissors" and player1 == "rock":
+      print("Player 1 wins!")
+    else:
+      print("Player 2 wins!")
     
 
 def play_again():
@@ -51,13 +50,11 @@ while play == True:
   player1 = choose_rps()
   player2 = choose_rps()
 
-  print("Player 1 chose", player1, ".")
-  print("Player 2 chose", player2, ".")
+  print("Player 1 chose" + " " + player1 + ".")
+  print("Player 2 chose" + " " + player2 + ".")
 
   rps_gameplay(player1, player2)
 
-  print(" ")
-
   play = play_again()
 
-print("Thank you for playing!")      
+print("Thank you for playing!")  
